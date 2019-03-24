@@ -30,8 +30,7 @@ required.add_argument('-p', '--parser',
                       choices=parsers.keys(),
                       required=True,
                       dest='parser',
-                      help=('Specify which parser is going to be'
-                            'used to scrape weather information.'))
+                      help='Specify which parser is going to be used to scrape weather information.')
 
 unit_values = [name.title() for name, value in Unit.__members__.items()]
 
@@ -40,8 +39,7 @@ required.add_argument('-u', '--unit',
                       action=SetUnitAction,
                       required=False,
                       dest='unit',
-                      help=('Specify the unit that will be used to display'
-                            'the temperatures'))
+                      help='Specify the unit that will be used to display the temperatures')
 required.add_argument('-a', '--areacode',
                       required=True,
                       dest='area_code',
@@ -55,7 +53,21 @@ argparser.add_argument('-td', '--today',
                        action='store_const',
                        const=ForecastType.TODAY,
                        help='Show the weather forecast for the current day')
-
+argparser.add_argument('-5d', '--fiveday',
+                       dest='forecast_option',
+                       action='store_const',
+                       const=ForecastType.FIVEDAYS,
+                       help='Shows the weather forecast for the next 5 days')
+argparser.add_argument('-10d', '--tenday',
+                       dest='forecast_option',
+                       action='store_const',
+                       const=ForecastType.TENDAYS,
+                       help='Shows the weather forecast for the next 10 days')
+argparser.add_argument('-w', '--weekend',
+                       dest='forecast_option',
+                       action='store_const',
+                       const=ForecastType.WEEKEND,
+                       help='Shows the weather forecast for the next or current weekend')
 args = argparser.parse_args()
 
 _validate_forecast_args(args)

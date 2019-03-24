@@ -5,3 +5,4 @@ from .forecast import Forecast
 from .request import Request
 from .unit import Unit
 from .set_unit_action import SetUnitAction
+from .mapper import Mapper

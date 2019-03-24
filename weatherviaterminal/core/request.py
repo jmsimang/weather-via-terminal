@@ -13,7 +13,8 @@ class Request:
         self._base_url = base_url
         self._options = Options()
         self._options.headless = True
-        self._driver = webdriver.Firefox()
+        self._driver = webdriver.Firefox(capabilities=self._capabilities,
+                                         firefox_options=self._options)
 
     def _fetch_data(self, forecast, area):
         url = self._base_url.format(forecast=forecast, area=area)
