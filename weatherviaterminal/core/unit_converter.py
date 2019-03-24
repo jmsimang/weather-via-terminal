@@ -16,7 +16,7 @@ class UnitConverter:
         self._dest_unit = dest_unit
         self._convert_functions = {
             Unit.CELSIUS: self._to_celsius,
-            Unit.FAHRENHEIT: self._fahrenheit,
+            Unit.FAHRENHEIT: self._to_fahrenheit,
         }
 
     @property

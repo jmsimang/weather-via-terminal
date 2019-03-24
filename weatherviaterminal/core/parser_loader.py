@@ -25,7 +25,7 @@ def _import_parsers(parserfiles):
     :return: A dictionary containing class names and objects.
     """
     m = re.compile('.+parser$', re.I)
-    _modules = __import__('weatherterminal.parsers',
+    _modules = __import__('weatherviaterminal.parsers',
                           globals(),
                           locals(),
                           parserfiles,

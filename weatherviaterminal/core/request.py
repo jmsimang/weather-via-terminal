@@ -7,14 +7,13 @@ from selenium import webdriver
 class Request:
     def __init__(self, base_url):
         self._capabilities = webdriver.DesiredCapabilities().FIREFOX
-        self._capabilities["marionette"] == False
+        self._capabilities["marionette"] = True
+        self._gecko_binary = os.path.join(os.curdir, 'firefox/geckodriver')
         self._firefox_binary = FirefoxBinary(r'/usr/local/bin/firefox')
         self._base_url = base_url
         self._options = Options()
         self._options.headless = True
-        self._driver = webdriver.Firefox(capabilities=self._capabilities,
-                                         firefox_options=self._options,
-                                         firefox_binary=self._firefox_binary)
+        self._driver = webdriver.Firefox()
 
     def _fetch_data(self, forecast, area):
         url = self._base_url.format(forecast=forecast, area=area)

@@ -29,7 +29,7 @@ class WeatherComParser:
             'today_nowcard-hilo': 'div',
         }
 
-        content = self._request.fetch_data(args.forecast_option.value, args.area_code)
+        content = self._request._fetch_data(args.forecast_option.value, args.area_code)
         bs = BeautifulSoup(content, 'html.parser')
         container = bs.find('section', class_='today_nowcard-container')
         weather_conditions = self._parse(container, criteria)
