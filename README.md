@@ -9,7 +9,7 @@ project may have, by running: `python3 -m venv weather-via-terminal`
 
 Next, activate the virtual environment by running: `. weather-via-terminal/bin/activate`
 
-Lastly, create a projects and a module folder (_same name as environment_), create the requirements.txt, and install
+Lastly, create a projects and a module folder (_same name as environment but without dashes_), create the requirements.txt, and install
 all the project dependencies.
 
 ## Project Dependecies
