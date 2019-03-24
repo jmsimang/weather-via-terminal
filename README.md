@@ -1,4 +1,4 @@
-# weather-via-terminal
+# weatherviaterminal
 
 Python terminal weather application using BeautifulSoup4, Selenium, and Firefox Headless.
 
