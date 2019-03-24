@@ -1,6 +1,6 @@
 .idea
-weather-via-terminal/__pycache__
-weather-via-terminal/core/__pycache__
-weather-via-terminal/parsers/__pycache__
+weatherviaterminal/__pycache__
+weatherviaterminal/core/__pycache__/
+weatherviaterminal/parsers/__pycache__/
 geckodriver.log
 firefox
